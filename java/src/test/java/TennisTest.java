@@ -21,7 +21,9 @@ public class TennisTest {
         this.player2Score = player2Score;
         this.expectedScore = expectedScore;
     }
-    
+
+    // This project uses JUnit4, so you may see some differences from what we saw
+    // This is how JUnit4 implements parametrized tests
     @Parameters
     public static Collection<Object[]> getAllScores() {
         return Arrays.asList(new Object[][] {
