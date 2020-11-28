@@ -21,10 +21,8 @@ public class TennisGame1 implements TennisGame {
     public String getScore() {
         StringBuilder score = new StringBuilder();
         int tempScore;
-        if (m_score1==m_score2)
-        {
-            switch (m_score1)
-            {
+        if (m_score1==m_score2) {
+            switch (m_score1) {
                 case 0:
                     score = new StringBuilder("Love-All");
                     break;
@@ -37,25 +35,19 @@ public class TennisGame1 implements TennisGame {
                 default:
                     score = new StringBuilder("Deuce");
                     break;
-                
             }
         }
-        else if (m_score1>=4 || m_score2>=4)
-        {
+        else if (m_score1>=4 || m_score2>=4) {
             int minusResult = m_score1-m_score2;
             if (minusResult==1) score = new StringBuilder("Advantage player1");
             else if (minusResult ==-1) score = new StringBuilder("Advantage player2");
             else if (minusResult>=2) score = new StringBuilder("Win for player1");
             else score = new StringBuilder("Win for player2");
-        }
-        else
-        {
-            for (int i=1; i<3; i++)
-            {
+        } else {
+            for (int i=1; i<3; i++) {
                 if (i==1) tempScore = m_score1;
                 else { score.append("-"); tempScore = m_score2;}
-                switch(tempScore)
-                {
+                switch(tempScore) {
                     case 0:
                         score.append("Love");
                         break;
