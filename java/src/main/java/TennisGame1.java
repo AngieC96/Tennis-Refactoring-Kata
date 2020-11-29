@@ -3,12 +3,12 @@ public class TennisGame1 implements TennisGame {
     
     private int scorePlayer1 = 0;
     private int scorePlayer2 = 0;
-    private String player1Name;
-    private String player2Name;
+    private String namePlayer1;
+    private String namePlayer2;
 
     public TennisGame1(String player1Name, String player2Name) {
-        this.player1Name = player1Name;
-        this.player2Name = player2Name;
+        this.namePlayer1 = player1Name;
+        this.namePlayer2 = player2Name;
     }
 
     public void wonPoint(String playerName) {
@@ -20,7 +20,7 @@ public class TennisGame1 implements TennisGame {
 
     public String getScore() {
         StringBuilder score = new StringBuilder();
-        int tempScore;
+        int tempScore = 0;
         if (scorePlayer1 == scorePlayer2) {
             switch (scorePlayer1) {
                 case 0:
